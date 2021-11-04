@@ -1,0 +1,17 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: my-s3-store
+  namespace: default
+spec:
+  type: bindings.aws.s3
+  version: v1
+  metadata:
+    - name: bucket
+      value: "fos"
+    - name: region
+      value: "lb-1"
+    - name: accessKey
+      value: "minio"
+    - name: secretKey
+      value: "putao520"

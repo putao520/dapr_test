@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"appId": "my-app",
+			"appPort": 3500,
+			"label": "daprd-debug",
+			"type": "daprd"
+		},
+		{
+			"appId": "my-app",
+			"label": "daprd-down",
+			"type": "daprd-down"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: my-mysql-store
+  namespace: default
+spec:
+  type: bindings.mysql
+  version: v1
+  metadata:
+    - name: url
+      value: "root:123456@tcp(192.168.75.80:3306)/dapr_test?timeout=5s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4"
+    - name: maxIdleConns
+      value: "10"
+    - name: maxOpenConns
+      value: "10"
+    - name: connMaxLifetime
+      value: "12s"
+    - name: connMaxIdleTime
+      value: "12s"
