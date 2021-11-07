@@ -7,13 +7,7 @@ mysql:
 sudo docker run -d --restart=always -p 0.0.0.0:3306:3306 --name root -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 =========================
 minio:
-docker run -p 0.0.0.0:9000:9000 -p 0.0.0.0:9001:9001 --name minio \
--d --restart=always \
--e "MINIO_ACCESS_KEY=minio" \
--e "MINIO_SECRET_KEY=putao520" \
--v /home/data:/data \
--v /home/config:/root/.minio \
-minio/minio server /data --console-address "0.0.0.0:9001"
+docker run -p 0.0.0.0:9000:9000 -p 0.0.0.0:9001:9001 --name minio -d --restart=always -e "MINIO_ACCESS_KEY=minio" -e "MINIO_SECRET_KEY=putao520" -v /home/data:/data -v /home/config:/root/.minio minio/minio server /data --console-address "0.0.0.0:9001"
 http://192.168.75.80:9001
 =========================
 redis:
