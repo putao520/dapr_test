@@ -128,9 +128,9 @@ func daprTestS3() {
 }
 
 func main() {
-	app := fiber.New()
-	httpServer(app)
-	wsServer(app)
+	// app := fiber.New()
+	// httpServer(app)
+	// wsServer(app)
 	// wsTest(app)
 
 	// daprTestMysqlBind()
@@ -139,7 +139,7 @@ func main() {
 
 	daprTestS3()
 
-	app.Listen(":3000")
+	// app.Listen(":3000")
 }
 
 /* init dapr client
