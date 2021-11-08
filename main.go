@@ -8,6 +8,8 @@ import (
 	dapr "github.com/dapr/go-sdk/client"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
+
+	qb "github.com/didi/gendry/builder"
 )
 
 func httpServer(app *fiber.App) {
@@ -128,6 +130,21 @@ func daprTestS3() {
 }
 
 func main() {
+	var data []map[string]interface{}
+	data = append(data, map[string]interface{}{
+		"name": "deen",
+		"age":  23,
+	})
+	data = append(data, map[string]interface{}{
+		"name": "Tony",
+		"age":  30,
+	})
+	cond, vals, err := qb.BuildReplaceInsert("tablename", data)
+
+	fmt.Print(cond)
+	fmt.Print(vals)
+	fmt.Print(err)
+
 	// app := fiber.New()
 	// httpServer(app)
 	// wsServer(app)
@@ -137,7 +154,7 @@ func main() {
 
 	// daprTestRedis()
 
-	daprTestS3()
+	// daprTestS3()
 
 	// app.Listen(":3000")
 }

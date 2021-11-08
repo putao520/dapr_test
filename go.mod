@@ -7,6 +7,7 @@ require github.com/gofiber/fiber/v2 v2.21.0
 require (
 	github.com/dapr/components-contrib v1.2.0 // indirect
 	github.com/dapr/kit v0.0.1 // indirect
+	github.com/didi/gendry v1.7.0 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/fasthttp/websocket v1.4.3-rc.9 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
