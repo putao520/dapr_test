@@ -15,9 +15,9 @@ dapr run --app-id myapp --app-port 50001 --app-protocol grpc --dapr-grpc-port 50
 
 app在主机，dapr在容器 
 http模式:
-docker run --net="host" --mount type=bind,source=d:/dapr_test/my-components,target=/components putao520/dapr-gs:2021110708 ./linux_amd64/release/daprd --app-id myapp --app-port 3500 --dapr-http-port 3500 --placement-host-address placement:50006
+docker run --net="host" --mount type=bind,source=d:/dapr_test/my-components,target=/components putao520/dapr-gs:2021110708 ./linux_amd64/release/daprd --app-id myapp --app-port 3500 --dapr-http-port 3500 --placement-host-address placement:50006 --components-path /components
 grpc模式:
-docker run --net="host" --mount type=bind,source=d:/dapr_test/my-components,target=/components putao520/dapr-gs:2021110708 ./linux_amd64/release/daprd --app-id myapp --app-port 50001 --app-protocol grpc --dapr-grpc-port 50001 --placement-host-address placement:50006
+docker run --net="host" --mount type=bind,source=d:/dapr_test/my-components,target=/components putao520/dapr-gs:2021110708 ./linux_amd64/release/daprd --app-id myapp --app-port 50001 --app-protocol grpc --dapr-grpc-port 50001 --placement-host-address placement:50006 --components-path /components
 ```
 
 ### 存储组件组
