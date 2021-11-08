@@ -8,11 +8,11 @@ spec:
   version: v1
   metadata:
     - name: endpoint
-      value: 192.168.75.80:9000
+      value: "12.12.12.120:9000"
     - name: bucket
       value: fos
     - name: region
-      value: lb-1
+      value: "gs-1"
     - name: accessKey
       value: minio
     - name: secretKey
