@@ -7,11 +7,13 @@ spec:
   type: bindings.aws.s3
   version: v1
   metadata:
+    - name: endpoint
+      value: 192.168.75.80:9000
     - name: bucket
-      value: "fos"
+      value: fos
     - name: region
-      value: "lb-1"
+      value: lb-1
     - name: accessKey
-      value: "minio"
+      value: minio
     - name: secretKey
-      value: "putao520"
+      value: putao520
